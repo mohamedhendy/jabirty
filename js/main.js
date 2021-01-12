@@ -1,4 +1,8 @@
 $(function () {
+    var header = $('nav').outerHeight();
+    var footer = $('footer').outerHeight();
+    var pages = header + footer;
+    $('.pages').css('min-height', "calc(100vh - ".concat(pages, "px)"));
     // Owl carousal 
     $('#slider').owlCarousel({
         autoplay: true,
